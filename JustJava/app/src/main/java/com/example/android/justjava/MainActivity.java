@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void displayThank(){
         TextView thank = (TextView) findViewById(R.id.thank);
-        thank.setText("Thank!");
+        thank.setText("Thank!!!");
     }
 
 }
