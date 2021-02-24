@@ -45,8 +45,8 @@
             android:text="0"
             android:layout_below="@id/quantity"/>
         <Button
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:text="+"
             android:onClick="increment"/>
     </LinearLayout>
