@@ -10,7 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity">
     <ImageView
-        android:src="@drawable/proba"
+        android:src="@drawable/serdze2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerHorizontal=""
