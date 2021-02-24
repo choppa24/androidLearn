@@ -5,55 +5,84 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="16dp"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:paddingTop="16dp"
     android:background="#FFFFF0"
     tools:context=".MainActivity">
-
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/cofe2"
+        android:scaleType="fitXY"/>
     <TextView
         android:id="@+id/quantity"
-        android:textColor="#778899"
+        android:textColor="#FFFFFF"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
         android:textSize="20sp"
         android:text="QUANTITY"/>
-
-    <TextView
-        android:id="@+id/z_counter"
+    <LinearLayout
+        android:id="@+id/linlay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp"
-        android:textSize="16sp"
-        android:textColor="#000000"
-        android:text="0"
-        android:layout_below="@id/quantity"/>
+        android:layout_below="@id/quantity"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="-"
+            android:onClick="decrement"/>
+        <TextView
+            android:id="@+id/q_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:text="0"
+            android:layout_below="@id/quantity"/>
+        <Button
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="+"
+            android:onClick="increment"/>
+    </LinearLayout>
     <TextView
         android:id="@+id/price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="PRICE"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp"
-        android:textColor="#778899"
-        android:layout_below="@id/z_counter"
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/linlay"
         android:textSize="20sp"/>
     <TextView
         android:id="@+id/pr_counter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:text="Total: 0$"
+        android:layout_below="@id/price"/>
+    <TextView
+        android:id="@+id/thank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp"
         android:textSize="16sp"
-        android:textColor="#000000"
-        android:text="0$"
-        android:layout_below="@id/price"/>
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/pr_counter"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/pr_counter"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/thank"
         android:text="ORDER"
         android:onClick="submitOrder"/>
 
